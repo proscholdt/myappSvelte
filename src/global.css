@@ -63,8 +63,14 @@ h1, h2, h3, h4, h5, h6 {
 a{
   display:inline-block;
   text-decoration: none;
-  
+  text-underline-offset: 2px;
 }
+
+ul{
+  list-style: none;
+  padding-left: unset;
+}
+
 
 /*
   10. Create a root stacking context
@@ -105,5 +111,5 @@ h1{
 
 img{
   display: inline;
-  max-width:36px;
+  max-width:360px;
 }

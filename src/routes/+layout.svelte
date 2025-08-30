@@ -1,9 +1,9 @@
 <script>
     import '../global.css'
-    // Supports weights 100-900
     import '@fontsource-variable/roboto-condensed';
     import '@fontsource-variable/Cabin';
+    import Header from '$lib/Header.svelte';
 </script>
 
-
+<Header/>
 <slot/>

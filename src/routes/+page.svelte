@@ -10,6 +10,7 @@
     href="/sobre"
     icon="muscle"
     img="musculacao"
+    iconSize="28px" 
 
  />
 

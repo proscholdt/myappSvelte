@@ -3,8 +3,9 @@
     import imgMsuculacao from '$lib/assets/musculacao.jpg';
     import imgExercicios from '$lib/assets/exercicios.jpg'
     import iconMuscle from '$lib/assets/icon-muscle.png';
-    import iconWeight from '$lib/assets/icon-weight.png'
+    import iconWeight from '$lib/assets/icon-weight.png';
 
+    export let iconSize = "32px";
     export let title = 'Titulo';
     export let content = 'Insira o content';
     export let btn;
@@ -28,10 +29,10 @@
    
     <div class="intro__wrapper wrap">
         <!-- Título principal da página, pergunta motivacional para o visitante -->
-        <h1>
-            {@html title}
-            <img src="{icon}" alt="">
-        </h1>
+    <h1>
+    {@html title}
+    <img src="{icon}" alt="" style="width: {iconSize}; height: {iconSize}; margin-left: 8px;">
+    </h1>
 
         <!-- Texto de apresentação/motivação da academia -->
         <p>
