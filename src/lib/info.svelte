@@ -1,0 +1,50 @@
+<script>
+    import IconPlus from "$lib/assets/IconPlus.svelte";
+
+    export let question;
+    export let answer;
+
+    let active;
+    let handleActive = () =>{
+        active = !active;
+    }
+
+</script>
+
+<div class="info" role="button" on:click={handleActive} 
+    on:keydown={handleActive} tabindex="0">
+
+    <div class="question">
+        <h3>{question}</h3>
+        <IconPlus/>
+    </div>
+
+    {#if active}
+    <div class="answer">
+        <p>{answer}</p>
+    </div>
+    {/if}
+</div>
+
+<style>
+    .question{
+        display:flex;
+        align-items:center;
+        border: 1px solid var(--subtle);
+        padding:17px 16px;
+        height: 80px;
+    }
+
+    .question :global(svg){
+        margin-left:auto;
+        margin-right: 8px;
+        flex-shrink: 0;
+    }
+
+    .answer{
+        padding: 0 16px;
+        border-left: 1px solid var(--feat);
+        margin-top: 16px;
+        margim-bottom:16px;
+    }
+</style>
