@@ -3,8 +3,8 @@
     import imgMsuculacao from '$lib/assets/musculacao.jpg';
     import iconMuscle from '$lib/assets/icon-muscle.png';
 
-    export let title;
-    export let content;
+    export let title = 'Titulo';
+    export let content = 'Insira o content';
     export let btn;
     export let href;
     export let img;
@@ -34,8 +34,9 @@
             {content}
         </p>
 
-        <!-- Link para a página "Sobre" para mais informações sobre a academia -->
+        {#if btn && href}
         <a class="btn" href={href}>{btn}</a>
+        {/if}
     </div> 
 </section>
 
