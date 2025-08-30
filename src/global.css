@@ -2,6 +2,7 @@
 
 :root{
   --bg: #121212;
+  --blak: #121212;
   --feat: #FF3E00;
   --white: #ffffff;
 }
@@ -29,6 +30,8 @@ body {
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   font-family: 'Cabin', sans-serif;
+  background-color: var(--bg);
+  color: #ffffff;
 
 }
 
@@ -56,6 +59,13 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
+
+a{
+  display:inline-block;
+  text-decoration: none;
+  
+}
+
 /*
   10. Create a root stacking context
 */
@@ -65,4 +75,29 @@ h1, h2, h3, h4, h5, h6 {
 
 h1,h2,h3{
   font-family: 'Roboto Condensed Variable', sans-serif;
+  line-height: 1.2;
+}
+
+h1{
+  font-size: calc(36 / 16 * 1rem);
+
+}
+
+.wrap{
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  color: #ffffff;
+  border: 1px solid #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: 250ms;
+}
+
+.btn:hover{
+  background-color: #fff;
+  color: #121212;
+  transition: 125ms;
 }
