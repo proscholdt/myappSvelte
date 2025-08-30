@@ -5,6 +5,8 @@
   --blak: #121212;
   --feat: #FF3E00;
   --white: #ffffff;
+  --overlay: rgba(0,0,0,0.55);
+  --subtle: rgba(255,255,255,0.20);
 }
 
 
