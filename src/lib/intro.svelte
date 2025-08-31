@@ -5,6 +5,7 @@
     import imgAlongamento from '$lib/assets/alongamento.jpg';
     import iconMuscle from '$lib/assets/icon-muscle.png';
     import iconWeight from '$lib/assets/icon-weight.png';
+    import {fly} from 'svelte/transition';
 
     export let iconSize = "32px";
     export let title = 'Titulo';
@@ -30,20 +31,20 @@
     class="intro" 
     style="background-image: url({img})" >
    
-    <div class="intro__wrapper wrap">
+    <div class="intro__wrapper wrap" >
         <!-- Título principal da página, pergunta motivacional para o visitante -->
-    <h1>
+    <h1 in:fly={{y:-12, duration:125, delay:250}}>
     {@html title}
     <img src="{icon}" alt="" style="width: {iconSize}; height: {iconSize}; margin-left: 8px;">
     </h1>
 
         <!-- Texto de apresentação/motivação da academia -->
-        <p>
+        <p in:fly={{y:-12, duration:125, delay:250}}>
             {content}
         </p>
 
         {#if btn && href}
-        <a class="btn" href={href}>{btn}</a>
+        <a class="btn" href={href} in:fly={{y:-12, duration:125, delay:375}}>{btn}</a>
         {/if}
     </div> 
 </section>
