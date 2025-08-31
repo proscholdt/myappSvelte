@@ -1,6 +1,8 @@
 <script>
     import IconPlus from "$lib/assets/IconPlus.svelte";
 
+    import autoAnimate from "@formkit/auto-animate"
+
     export let question;
     export let answer;
 
@@ -11,10 +13,12 @@
 
 </script>
 
-<div class="info" role="button" on:click={handleActive} 
-    on:keydown={handleActive} tabindex="0">
+<div class="info" role="button"
+    on:click={handleActive} 
+    on:keydown={handleActive} 
+    tabindex="0"  use:autoAnimate>
 
-    <div class="question">
+    <div class="question" class:active={active}>
         <h3>{question}</h3>
         <IconPlus/>
     </div>
@@ -26,7 +30,13 @@
     {/if}
 </div>
 
+
 <style>
+
+    .info{
+        cursor:pointer;        
+    }
+
     .question{
         display:flex;
         align-items:center;
@@ -35,16 +45,32 @@
         height: 80px;
     }
 
+    .question:hover{
+        background-color: var(--subtle)
+    }
+
+    .question.active{
+        border-color: #fff;
+        transition: 125ms;
+    }
+
     .question :global(svg){
         margin-left:auto;
         margin-right: 8px;
         flex-shrink: 0;
     }
 
+    .question.active :global(svg){
+        transform: rotate(45deg);
+        transition: 250ms;
+
+    }    
+
     .answer{
         padding: 0 16px;
         border-left: 1px solid var(--feat);
         margin-top: 16px;
-        margim-bottom:16px;
+        margin-bottom:16px;
     }
+
 </style>
