@@ -1,7 +1,7 @@
 <script>
     import '../global.css'
     import '@fontsource-variable/roboto-condensed';
-    import '@fontsource-variable/Cabin';
+    import '@fontsource-variable/cabin';
     import Header from '$lib/Header.svelte';
     import Footer from '$lib/Footer.svelte';
 	import Credits from '$lib/credits.svelte';
