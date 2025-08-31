@@ -29,7 +29,7 @@
     display:grid;
     grid-template-columns: 1fr 1fr;
     gap:20px;
-    align-items:center;
+    align-items:start; /* alterado de center para start */
   }
 
   .footer__img{
@@ -73,6 +73,13 @@
     margin-top:24px;
     display:flex;
     gap:8px;
+  }
+
+  @media(max-width: 800px){
+    .footer__wrapper{
+      grid-template-columns: 1fr;
+      
+    }
   }
 
 </style>

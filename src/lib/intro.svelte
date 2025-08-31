@@ -1,18 +1,21 @@
 <script>
     // Importa a imagem musculacao.jpg da pasta assets para uso como fundo da seção principal
     import imgMsuculacao from '$lib/assets/musculacao.jpg';
-    import imgExercicios from '$lib/assets/exercicios.jpg'
+    import imgExercicios from '$lib/assets/exercicios.jpg';
+    import imgAlongamento from '$lib/assets/alongamento.jpg';
     import iconMuscle from '$lib/assets/icon-muscle.png';
     import iconWeight from '$lib/assets/icon-weight.png';
 
     export let iconSize = "32px";
     export let title = 'Titulo';
     export let content = 'Insira o content';
-    export let btn;
-    export let href;
+    export let btn ="Saiba mais";
+    export let href = false;
+
     export let img = 'musculacao';
     if(img === 'musculacao') img = imgMsuculacao
     if(img === 'exercicios') img = imgExercicios
+    if(img === 'alongamento') img = imgAlongamento
 
     export let icon;
     if(icon === 'muscle') icon = iconMuscle
