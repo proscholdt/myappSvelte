@@ -1,17 +1,33 @@
-<script>
-    import Intro from '$lib/intro.svelte';
+<script lang="ts">
+  import Header from "../components/Header.svelte";
+  import PortalGrid from "../components/PortalGrid.svelte";
+  import Footer from "../components/Footer.svelte";
 </script>
 
- <Intro
- 
-    title ="Você está pronto para o desafio?"
-    content = "A Academia Local está pronta para te ajudar a chegar mais longe e alcançar sua melhor performance."
-    btn="Sobre"
-    href="/sobre"
-    icon="muscle"
-    img="musculacao"
-    iconSize="28px" 
+<svelte:head>
+  <title>ItValley Portal</title>
+</svelte:head>
 
- />
+<div class="relative min-h-screen overflow-hidden">
+  <video
+    class="absolute inset-0 w-full h-full object-cover -z-20"
+    autoplay
+    muted
+    loop
+    playsinline
+    aria-hidden="true"
+  >
+    <source src="/images/trofeus/Futuro%20Digital%20IA.mp4" type="video/mp4" />
+  </video>
+  <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/80 -z-10"></div>
 
-
+  <div class="relative">
+    <Header />
+    <main id="main-content" class="pt-32 pb-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <PortalGrid />
+      </div>
+    </main>
+    <Footer />
+  </div>
+</div>
